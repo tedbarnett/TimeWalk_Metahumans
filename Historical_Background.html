@@ -108,6 +108,51 @@
     font-style: italic;
     margin: 4px 0 0;
   }
+  h3.refimages { color: #6b3f1c; }
+  .refgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 10px 0 4px;
+  }
+  @media (max-width: 560px) {
+    .refgrid { grid-template-columns: 1fr; }
+  }
+  figure.refimg {
+    margin: 0;
+    background: #fffdf8;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  figure.refimg a.imglink {
+    display: block;
+    border: none;
+    background: #efe7d6;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+  }
+  figure.refimg img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #ece3d1;
+  }
+  figure.refimg figcaption {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 8px 2px 0;
+    line-height: 1.4;
+    flex: 1;
+  }
+  figure.refimg .imgsrc {
+    font-size: 0.76rem;
+    margin: 6px 2px 0;
+  }
   .sources { font-size: 0.9rem; }
   .sources ul { margin: 6px 0 0; padding-left: 20px; }
   .sources li { margin: 3px 0; }
@@ -176,9 +221,29 @@
       <p class="caption">Caveat: no reliable portrait of Hamilton at 19–21 exists. The best-known likenesses (Trumbull, Ceracchi bust) are from the 1790s. Use them for face structure but read down the age and slim the features for 1776.</p>
     </div>
 
+    <h3 class="refimages">Reference images for the artist</h3>
+    <div class="refgrid">
+      <figure class="refimg">
+        <a class="imglink" href="likeness_images/hamilton_1_trumbull1792.jpg" target="_blank" rel="noopener"><img src="likeness_images/hamilton_1_trumbull1792.jpg" alt="Alexander Hamilton by John Trumbull, c.1792"></a>
+        <figcaption>John Trumbull, c.1792 (National Gallery of Art). Bust-length, near front-facing — the crispest facial likeness. Best all-round face reference.</figcaption>
+        <p class="imgsrc"><a href="https://commons.wikimedia.org/wiki/File:Alexander_Hamilton.jpg" target="_blank" rel="noopener">Source (Wikimedia Commons, PD)</a></p>
+      </figure>
+      <figure class="refimg">
+        <a class="imglink" href="likeness_images/hamilton_2_trumbull1806.jpg" target="_blank" rel="noopener"><img src="likeness_images/hamilton_2_trumbull1806.jpg" alt="Alexander Hamilton by John Trumbull, 1806"></a>
+        <figcaption>John Trumbull, 1806 (National Portrait Gallery). High-resolution posthumous portrait — excellent for fine bone-structure and skin detail.</figcaption>
+        <p class="imgsrc"><a href="https://commons.wikimedia.org/wiki/File:John_Trumbull_-_Alexander_Hamilton_-_Google_Art_Project.jpg" target="_blank" rel="noopener">Source (Wikimedia Commons, PD)</a></p>
+      </figure>
+      <figure class="refimg">
+        <a class="imglink" href="likeness_images/hamilton_3_ceracchi_bust.jpg" target="_blank" rel="noopener"><img src="likeness_images/hamilton_3_ceracchi_bust.jpg" alt="Marble bust of Alexander Hamilton by Giuseppe Ceracchi, 1794"></a>
+        <figcaption>Marble bust by Giuseppe Ceracchi, 1794 (Crystal Bridges Museum). Sculpted from life — the best 3D reference for nose, jaw and skull.</figcaption>
+        <p class="imgsrc"><a href="https://commons.wikimedia.org/wiki/File:Alexander_Hamilton_by_Ceracchi_-_marble,_Crystal_Bridges_Museum.jpg" target="_blank" rel="noopener">Source (Wikimedia Commons, PD)</a></p>
+      </figure>
+    </div>
+
     <div class="sources">
       <h3>Sources</h3>
       <ul>
+        <li><strong><a href="https://wiki.timewalk.live/people/alexander-hamilton-1776" target="_blank" rel="noopener">TimeWalk Wiki — Alexander Hamilton at 21 (1776)</a></strong> (project character reference for the 1776 level)</li>
         <li><a href="https://en.wikipedia.org/wiki/Alexander_Hamilton" target="_blank" rel="noopener">Wikipedia — Alexander Hamilton</a> (birth-year 1755/1757 ambiguity; militia 1775, NY Provincial Company of Artillery)</li>
         <li><a href="https://www.nps.gov/york/learn/historyculture/hamiltonbio.htm" target="_blank" rel="noopener">National Park Service — Alexander Hamilton biography</a> (captain of artillery, March 1776; service around NYC)</li>
         <li><a href="https://www.battlefields.org/learn/biographies/alexander-hamilton" target="_blank" rel="noopener">American Battlefield Trust — Alexander Hamilton</a> (early military service, 1776 campaign)</li>
@@ -228,9 +293,29 @@
       <p class="caption">Caveat: the familiar Burr portraits (esp. John Vanderlyn, c.1801/1809) show him in his 40s–50s. For 1776, use them for eye/hair colour and face shape but restore a full hairline and youthful skin.</p>
     </div>
 
+    <h3 class="refimages">Reference images for the artist</h3>
+    <div class="refgrid">
+      <figure class="refimg">
+        <a class="imglink" href="likeness_images/burr_1_vanderlyn1802.jpg" target="_blank" rel="noopener"><img src="likeness_images/burr_1_vanderlyn1802.jpg" alt="Aaron Burr by John Vanderlyn, 1802"></a>
+        <figcaption>John Vanderlyn, 1802 (New-York Historical Society). The definitive Burr likeness — three-quarter view. Primary face reference; keep colour/features, restore a full hairline for 1776.</figcaption>
+        <p class="imgsrc"><a href="https://commons.wikimedia.org/wiki/File:John_Vanderlyn_-_Official_Portrait_of_Vice_President_Aaron_Burr.jpg" target="_blank" rel="noopener">Source (Wikimedia Commons, PD)</a></p>
+      </figure>
+      <figure class="refimg">
+        <a class="imglink" href="likeness_images/burr_2_met_vandyck.jpg" target="_blank" rel="noopener"><img src="likeness_images/burr_2_met_vandyck.jpg" alt="Aaron Burr miniature by James Van Dyck, 1834"></a>
+        <figcaption>Miniature by James Van Dyck, 1834 (The Met, open access). Later-life but a documented likeness — complementary angle for the eyes and face shape.</figcaption>
+        <p class="imgsrc"><a href="https://www.metmuseum.org/art/collection/search/15217" target="_blank" rel="noopener">Source (Metropolitan Museum, PD)</a></p>
+      </figure>
+      <figure class="refimg">
+        <a class="imglink" href="likeness_images/burr_3_vp.jpg" target="_blank" rel="noopener"><img src="likeness_images/burr_3_vp.jpg" alt="Aaron Burr portrait head"></a>
+        <figcaption>Portrait head (VP-era). Tight facial crop — low-resolution but a useful third angle. Read down in age for 1776.</figcaption>
+        <p class="imgsrc"><a href="https://commons.wikimedia.org/wiki/File:AaronBurr.jpg" target="_blank" rel="noopener">Source (Wikimedia Commons, PD)</a></p>
+      </figure>
+    </div>
+
     <div class="sources">
       <h3>Sources</h3>
       <ul>
+        <li><em>TimeWalk Wiki:</em> no Aaron Burr character page exists yet (the wiki has Hamilton, Washington, Nathan Hale and William Howe for 1776). Worth creating one to match.</li>
         <li><a href="https://en.wikipedia.org/wiki/Aaron_Burr" target="_blank" rel="noopener">Wikipedia — Aaron Burr</a> (b. Feb 6, 1756, Newark; Princeton grad; Continental Army 1775–79; Quebec)</li>
         <li><a href="https://www.britannica.com/biography/Aaron-Burr" target="_blank" rel="noopener">Encyclopædia Britannica — Aaron Burr</a> (early life, Quebec expedition, 1776 service)</li>
         <li><a href="https://www.ushistory.org/valleyforge/served/burr.html" target="_blank" rel="noopener">ushistory.org — Aaron Burr</a> (military service summary)</li>
@@ -282,9 +367,29 @@
       <p class="caption">Caveat: nearly everything about Stuyvesant's face comes from one attributed portrait (Couturier, c.1660) painted a few years before the surrender — good for 1664. The peg leg is the anchor detail; height and exact features are otherwise undocumented.</p>
     </div>
 
+    <h3 class="refimages">Reference images for the artist</h3>
+    <div class="refgrid">
+      <figure class="refimg">
+        <a class="imglink" href="likeness_images/stuyvesant_1_couturier_full.jpg" target="_blank" rel="noopener"><img src="likeness_images/stuyvesant_1_couturier_full.jpg" alt="Peter Stuyvesant, c.1660, attributed to Hendrick Couturier"></a>
+        <figcaption>Attributed to Hendrick Couturier, c.1660 (New-York Historical Society). THE definitive likeness, painted ~4 years before the surrender. Bust-length in armour and sash.</figcaption>
+        <p class="imgsrc"><a href="https://commons.wikimedia.org/wiki/File:Petrus_(Peter_Pieter)_Stuyvesant_portrait_c1660.jpg" target="_blank" rel="noopener">Source (Wikimedia Commons, PD)</a></p>
+      </figure>
+      <figure class="refimg">
+        <a class="imglink" href="likeness_images/stuyvesant_2_couturier_cropped.jpg" target="_blank" rel="noopener"><img src="likeness_images/stuyvesant_2_couturier_cropped.jpg" alt="Face-cropped detail of the c.1660 Couturier Stuyvesant portrait"></a>
+        <figcaption>Face-cropped detail of the same c.1660 portrait. Zoomed to the head — best direct reference for the nose, eyes, moustache and hair.</figcaption>
+        <p class="imgsrc"><a href="https://commons.wikimedia.org/wiki/File:Petrus_(Peter_Pieter)_Stuyvesant_portrait_c1660_(cropped).jpg" target="_blank" rel="noopener">Source (Wikimedia Commons, PD)</a></p>
+      </figure>
+      <figure class="refimg">
+        <a class="imglink" href="likeness_images/stuyvesant_3_gravure.jpg" target="_blank" rel="noopener"><img src="likeness_images/stuyvesant_3_gravure.jpg" alt="Engraving of Peter Stuyvesant after the Couturier portrait"></a>
+        <figcaption>Later engraving after the Couturier portrait. An alternate tonal read of the same face — helps distinguish features that sit in shadow in the painting.</figcaption>
+        <p class="imgsrc"><a href="https://commons.wikimedia.org/wiki/File:Peter_Stuyvesant_gravure.jpg" target="_blank" rel="noopener">Source (Wikimedia Commons, PD)</a></p>
+      </figure>
+    </div>
+
     <div class="sources">
       <h3>Sources</h3>
       <ul>
+        <li><strong><a href="https://wiki.timewalk.live/people/peter-stuyvesant" target="_blank" rel="noopener">TimeWalk Wiki — Peter Stuyvesant</a></strong> (project character reference for the 1664 level)</li>
         <li><a href="https://en.wikipedia.org/wiki/Peter_Stuyvesant" target="_blank" rel="noopener">Wikipedia — Peter Stuyvesant</a> (b. c.1610 Friesland; leg lost 1644 St. Martin; Director-General 1647–1664; c.1660 attributed portrait)</li>
         <li><a href="https://www.newnetherlandinstitute.org/history-and-heritage/dutch_americans/peter-stuyvesant/" target="_blank" rel="noopener">New Netherland Institute — Peter Stuyvesant</a> (scholarly biography, career and surrender)</li>
         <li><a href="https://www.nyhistory.org/community/peg-leg-peter-stuyvesant" target="_blank" rel="noopener">New-York Historical Society — "Peg Leg" Peter Stuyvesant</a> (the wooden leg, silver ornament, nicknames)</li>

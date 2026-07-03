@@ -3,10 +3,34 @@
 A clean, content-only **Unreal Engine 5.8** project containing three TimeWalk MetaHuman characters, prepared for handoff to an external artist for improvement.
 
 ## Characters
-- **Alexander Hamilton** (`Content/MetaHumans/Alexander`)
-- **Aaron Burr** (`Content/MetaHumans/Aaron_Burr`)
-- **Peter Stuyvesant** (`Content/MetaHumans/Peter_Stuyvesant`)
-- **Common** (`Content/MetaHumans/Common`) - shared MetaHuman body/face skeleton, materials, and rig that all three characters reference.
+- **Alexander Hamilton** (`Content/MetaHumans/Alexander`) — BP `1776-Alexander_Hamilton-BP`
+- **Aaron Burr** (`Content/MetaHumans/Aaron_Burr`) — BP `1776-Aaron_Burr-BP`
+- **Peter Stuyvesant** (`Content/MetaHumans/Peter_Stuyvesant`) — BP `1664-Peter_Stuyvesant-BP`
+- **Common** (`Content/MetaHumans/Common`) - shared MetaHuman body/face skeleton, materials, and rig that all three characters reference. Untouched — never renamed or modified.
+
+Drag any one character BP into a level: it renders the correct MetaHuman (face + body +
+grooms), is **fully clothed**, and plays the **real retargeted TimeWalk idle** looping. No
+Inworld / TimeWalkNPC plugin content required.
+
+### Current state (updated 2026-07-03)
+- **Fully dressed.** Every character's Torso / Legs / Feet / Hat / cap / CAPE slots are
+  wired to real garment meshes (previously they imported in underwear). Stuyvesant has no
+  shoe by design; Hamilton is clean-shaven by design.
+- **Real idle, looping.** The earlier procedural placeholder (`A_MH_SubtleIdle`) was
+  removed and replaced with the real retargeted TimeWalk idle clips
+  (`/Game/TimeWalk/IdleAnims/Retargeted/`): Hamilton + Burr use the standby idle, Stuyvesant
+  uses the cautious idle. The huge raw source mocap was intentionally skipped.
+- **Consistent naming.** Character-unique assets follow `<era>-<Name>-` (`1776-...`,
+  `1664-...`): `-BP`, `-SM_Face`, `-SM_Body` (Stuyvesant only), `-Groom_*`. Shared idle
+  clips are a shared library and are **not** prefixed. Nothing under `Common` was renamed.
+- **Blink** is a documented one-toggle in-editor step (see `CHARACTER_BP_NOTES.md`); it
+  could not be authored headlessly.
+- **Aaron Burr** has his own top-level BP and uses **his own** body mesh (`m_med_nrw_body`).
+- **Remaining in-editor steps** (both small, both in `CHARACTER_BP_NOTES.md`): (1) Burr's
+  groom binding assets (~2 min); (2) the optional blink toggle. Everything else is done.
+
+See **[CHARACTER_BP_NOTES.md](CHARACTER_BP_NOTES.md)** for the full component map, garment
+slot assignments, idle wiring, the groom-binding step, and the blink step.
 
 ## What was stripped
 All **Inworld** AI integration has been removed. Specifically, the three Inworld character Blueprints were deleted:
@@ -35,3 +59,4 @@ A sourced likeness brief for the artist — birthdates, ages, life summary, and 
 
 ---
 *Created by Helm - July 3, 2026*
+*Last updated by Helm — July 3, 2026 (fully clothed + real TimeWalk retargeted idle + consistent 1776-/1664- naming)*
