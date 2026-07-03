@@ -16,12 +16,10 @@ All **Inworld** AI integration has been removed. Specifically, the three Inworld
 
 This project has **no Inworld plugin and no custom C++ modules** (no `TimeWalkNPC`, no `UnrealMCP`). Only stock UE 5.8 MetaHuman/Groom/LiveLink/RigLogic plugins are enabled, so it opens cleanly without any third-party plugin installs.
 
-## Known residual references (Hamilton only)
-Two of Hamilton's animation Blueprints still hard-reference classes from the (removed) `TimeWalkNPC` C++ module and the Inworld runtime, so they will show an **unresolved parent class** if opened in-editor:
-- `Content/MetaHumans/Alexander/Face_AnimBP_Hamilton.uasset` — parent `TimeWalkLipsyncAnimInstance` (`/Script/TimeWalkNPC`), plus `AnimNode_InworldViseme` / `InworldVisemeDataAsset` references.
-- `Content/MetaHumans/Common/Female/Medium/NormalWeight/Body/ABP_HamiltonBody.uasset` — parent `TimeWalkIdleMotionAnimInstance` (`/Script/TimeWalkNPC`).
+All three characters' Face and Body skeletal meshes use the **stock MetaHuman post-process AnimBPs** (`Face_PostProcess_AnimBP`, `f_med_nrw_animbp` / `m_med_nrw_animbp`). There are **no** residual references to Inworld or the `TimeWalkNPC` module anywhere in the project — verified by a full project scan (zero hits). All assets are pure mesh/texture/groom/material with stock rigs.
 
-These do **not** block project load. The artist can reparent them to a stock `AnimInstance` (or the standard MetaHuman `Face_AnimBP`) if lip-sync/idle logic isn't needed for the art pass. Aaron Burr and Peter Stuyvesant have **no** such residual references — their assets are pure mesh/texture/groom/material.
+## Licensing
+These characters were created with Epic's **MetaHuman** framework and are subject to Epic Games' MetaHuman / Unreal Engine EULA — they may be used in Unreal Engine projects but not sold as standalone assets or used outside the UE ecosystem. No third-party paid (Fab/Quixel/Megascans) assets are included.
 
 ## Requirements
 - **Unreal Engine 5.8**
