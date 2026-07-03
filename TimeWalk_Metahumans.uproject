@@ -68,6 +68,10 @@
 		{
 			"Name": "ModelingToolsEditorMode",
 			"Enabled": true
+		},
+		{
+			"Name": "TimeWalkIdle",
+			"Enabled": true
 		}
 	]
 }
