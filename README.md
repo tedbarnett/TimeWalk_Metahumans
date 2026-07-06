@@ -60,3 +60,11 @@ A sourced likeness brief for the artist — birthdates, ages, life summary, and 
 ---
 *Created by Helm - July 3, 2026*
 *Last updated by Helm — July 3, 2026 (fully clothed + real TimeWalk retargeted idle + consistent 1776-/1664- naming)*
+
+<!-- timewalk-directory -->
+---
+## Part of the TimeWalk project
+
+**This repo:** content-only, Inworld-stripped MetaHuman assets for artist handoff. Source of character meshes/grooms flowing into TimeWalk_Characters.
+
+**Full project directory** (what every TimeWalk repo is for): https://helm.barnettlabs.tech/projects
